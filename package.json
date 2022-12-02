@@ -1,0 +1,15 @@
+{
+  "name": "evrthn-chrome",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "chrome-popup": "parcel src/popup/index.html",
+    "chrome-build": "cp public/* dist-chrome && parcel build --no-content-hash src/popup/index.html --out-dir dist-chrome && yarn run chrome-pack",
+    "chrome-pack": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --pack-extension=./dist-chrome --pack-extension-key=./dist-chrome.pem"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "parcel-bundler": "^1.12.5"
+  }
+}
